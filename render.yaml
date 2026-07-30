@@ -1,0 +1,98 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: hps-crm-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # These environment variables must be populated in the Render Dashboard
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: ADMIN_URL
+        sync: false
+      - key: MANAGER_URL
+        sync: false
+      - key: STAFF_URL
+        sync: false
+      - key: ACCOUNTANT_URL
+        sync: false
+
+  # Admin Panel (Static Site)
+  - type: web
+    name: hps-crm-admin
+    env: static
+    rootDir: admin-panel
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+
+  # Manager Panel (Static Site)
+  - type: web
+    name: hps-crm-manager
+    env: static
+    rootDir: manager-panel
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+
+  # Staff Panel (Static Site)
+  - type: web
+    name: hps-crm-staff
+    env: static
+    rootDir: staff-panel
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+
+  # Accountant Panel (Static Site)
+  - type: web
+    name: hps-crm-accountant
+    env: static
+    rootDir: accountant-panel
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false
