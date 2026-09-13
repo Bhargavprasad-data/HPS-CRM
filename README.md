@@ -82,6 +82,8 @@ A dedicated space for employees to manage their work and personal HR details.
    - Admin Panel: `npm run dev`
    - Manager Panel: `npm run dev`
    - Staff Panel: `npm run dev`
+   
+---
 
 ## License
 Proprietary / All Rights Reserved
