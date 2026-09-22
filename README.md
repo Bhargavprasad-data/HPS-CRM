@@ -60,7 +60,6 @@ A dedicated space for employees to manage their work and personal HR details.
    git clone https://github.com/Bhargavprasad-data/HPS-CRM-.git
    cd HPS-CRM-
    ```
-
 2. Install dependencies for all panels and the backend:
    ```bash
    cd backend && npm install
@@ -68,7 +67,6 @@ A dedicated space for employees to manage their work and personal HR details.
    cd ../manager-panel && npm install
    cd ../staff-panel && npm install
    ```
-
 3. Set up the environment variables (`.env` files) in each directory. See `.env.example` files for reference.
 
 4. Initialize the database:
@@ -76,13 +74,11 @@ A dedicated space for employees to manage their work and personal HR details.
    cd backend
    node src/config/initDb.js
    ```
-
 5. Start the development servers:
    - Backend: `npm run dev`
    - Admin Panel: `npm run dev`
    - Manager Panel: `npm run dev`
-   - Staff Panel: `npm run dev`
-   
+   - Staff Panel: `npm run dev`   
 ---
 
 ## License
