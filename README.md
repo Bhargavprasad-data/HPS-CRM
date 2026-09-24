@@ -82,4 +82,4 @@ A dedicated space for employees to manage their work and personal HR details.
 ---
 
 ## License
-Proprietary / All Rights Reserved
+Proprietary / All Rights Reserved.
