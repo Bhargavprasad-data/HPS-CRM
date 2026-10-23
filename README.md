@@ -7,7 +7,7 @@ A comprehensive Customer Relationship Management (CRM) and Employee Management s
 This CRM provides four distinct portals tailored to different roles within the organization:
    
 ### 1. Admin Panel
-The central hub for organizational oversight and management. 
+The central hub for organizational oversight and management.
 - **Dashboard & Analytics**: High-level overview of revenue, projects, and active employees. 
 - **Employee Management**: Manage employee profiles, roles, and ID cards.
 - **Payroll**: Process salaries, track unpaid dues, and manage payslips.
